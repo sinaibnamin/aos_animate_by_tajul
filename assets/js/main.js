@@ -189,12 +189,13 @@ window.addEventListener("load", () => {
         let animatedBannerContentSwiper = new Swiper(".animatedBannerContentSwiper", {
             slidesPerView: 1,
             allowTouchMove: false,
-            spaceBetween: 40
+            spaceBetween: 40,
+            // loop:true
         }),
             animatedBannerSwiper = new Swiper(".animatedBannerSwiper", {
                 preloadImages: false,
                 lazy: true,
-                loop: true,
+                // loop: true,
                 slidesPerView: 1,
                 effect: "fade",
                 spaceBetween: 40,
@@ -209,9 +210,10 @@ window.addEventListener("load", () => {
                         // console.log('slide after init')
                         // start
                         let currentActiveIndex = await this.activeIndex;
+
                         const appendVideo = await (
-                            this.slides[currentActiveIndex].querySelector(".videoWrapper").innerHTML = `<video autoplay muted playsinline class="deviceContent" poster="./assets/img/animatedBanner/animatedBanner_slide${currentActiveIndex}_poster.png">
-                                <source src="./assets/video/animatedBanner/animatedBanner_slide${currentActiveIndex}.mp4" type="video/mp4">
+                            this.slides[currentActiveIndex].querySelector(".videoWrapper").innerHTML = `<video autoplay muted playsinline class="deviceContent" poster="./assets/img/animatedBanner/animatedBanner_slide${currentActiveIndex + 1}_poster.png">
+                                <source src="./assets/video/animatedBanner/animatedBanner_slide${currentActiveIndex + 1}.mp4" type="video/mp4">
                             </video>`
                         )
                         const t = await this.slides[currentActiveIndex].querySelector("video");
@@ -229,9 +231,10 @@ window.addEventListener("load", () => {
             // console.log('slide change')
             // start
             let currentActiveIndex = await this.activeIndex;
+
             const appendVideo = await (
-                this.slides[currentActiveIndex].querySelector(".videoWrapper").innerHTML = `<video autoplay muted playsinline class="deviceContent" poster="./assets/img/animatedBanner/animatedBanner_slide${currentActiveIndex}_poster.png">
-                         <source src="./assets/video/animatedBanner/animatedBanner_slide${currentActiveIndex}.mp4" type="video/mp4">
+                this.slides[currentActiveIndex].querySelector(".videoWrapper").innerHTML = `<video autoplay muted playsinline class="deviceContent" poster="./assets/img/animatedBanner/animatedBanner_slide${currentActiveIndex + 1}_poster.png">
+                         <source src="./assets/video/animatedBanner/animatedBanner_slide${currentActiveIndex + 1}.mp4" type="video/mp4">
                      </video>`
             )
             const t = await this.slides[currentActiveIndex].querySelector("video");
