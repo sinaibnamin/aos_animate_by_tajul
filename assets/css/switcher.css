@@ -62,15 +62,15 @@ html {
 }
 
 .iphone-resize {
-  width: 390px;
-  height: 621px !important;
+  width: 375px;
+  height: 667px !important;
   margin: 40px auto !important;
   margin-bottom: 50px;
   padding-top: 40px;
   background: url(../../assets/img/switcher/iPhone2x.png) no-repeat;
   background-size: contain;
   background-position: center;
-  padding: 82px 29px 209px 33px
+  padding: 71px 65px 103px 70px
 }
 
 .destop-resize, .ipad-resize, .iphone-resize {
