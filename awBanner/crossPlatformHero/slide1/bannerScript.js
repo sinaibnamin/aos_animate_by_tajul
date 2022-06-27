@@ -1,6 +1,6 @@
 const pushAWAd = () =>{
     const unitLineItemName = `Showtime_Dexter_Hero_Pre_Premiere`;
-// server path variable. 
+// server path variable.
 const awServerPath = `./`; //set empty for local path
 // banner Wrapper element name
 const bannerWrapperName = `banner-item`;
@@ -17,7 +17,7 @@ const expectedLoopCount = 1; // default value 1 for no loop
 const totalAnimationTimeCount = 12000 // without loop, total second count like 12 second = 12000. default 0.
 
 // minified HTML with local path call
-const htmlWithoutServerPath = `<div id='awGlobalBnrWrapper'  class="awClickTagURL1">><div id='awBnrCreativeContent'></div></div>`;
+const htmlWithoutServerPath = `<div id='awGlobalBnrWrapper'  class="awClickTagURL1"><div id='awBnrCreativeContent'></div></div>`;
 
 // minified Css with local files call
 const cssWithoutServerPath = `.banner-item{margin-top:0}#awGlobalBnrWrapper{background:url(desktop_bg.png);background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;width:100%;height:300px;margin:0 auto;position:relative;margin-bottom:16px;margin-top:0;cursor:pointer}#awGlobalBnrWrapper #awBnrCreativeContent{width:960px;height:300px;margin:0 auto;background:url(desktop_content.png);background-position:center!important;background-repeat:no-repeat!important;position:relative;top:0;overflow-x:hidden;z-index:0}#awGlobalBnrWrapper #awBnrCreativeContent:hover{cursor:pointer}@media(max-width:979px){#awGlobalBnrWrapper{margin-bottom:16px;margin-top:0;height:300px;background:url(iPad_768x300_bg.png)}#awGlobalBnrWrapper #awBnrCreativeContent{position:relative;width:768px;height:300px;top:0;right:0;background:url(iPad_768x300_content.png)}}@media (max-width:767px){#awGlobalBnrWrapper{margin-bottom:12px;margin-top:0;height:250px}#awGlobalBnrWrapper #awBnrCreativeContent{height:250px;margin:0 auto;top:0;background-size:contain;width:96%}}@media (max-width:414px){#awGlobalBnrWrapper{margin-bottom:12px;margin-top:0;height:250px;background:url(iPhone_414x250_bg.png)}#awGlobalBnrWrapper #awBnrCreativeContent{background:url(iPhone_375x250_content.png);height:250px;width:100%;margin:0 auto;top:0}}@media(max-width:360px){#awGlobalBnrWrapper #awBnrCreativeContent{background-size:contain;width:100%;background-position:bottom!important}}@media(max-width:320px){#awGlobalBnrWrapper #awBnrCreativeContent{width:100%;background-size:contain}}`;
