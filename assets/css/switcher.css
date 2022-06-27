@@ -252,7 +252,8 @@ li.remove_frame {
 
   .ipad-resize {
     background-image: url(../../assets/img/switcher/iPad2x.png);
-    background-size: 913px 1221px
+    background-size: 913px 1221px;
+    background-position: top;
   }
 
   .iphone-resize {

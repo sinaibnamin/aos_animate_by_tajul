@@ -545,5 +545,16 @@ window.addEventListener("load", () => {
 })()
 
 const setAdItem = geturl => {
+
+
+console.log(document.documentElement.clientWidth)
+
+return
+
+
+
+
+
+
     window.open(`./awBanner/${geturl}/index.html`)
 };
