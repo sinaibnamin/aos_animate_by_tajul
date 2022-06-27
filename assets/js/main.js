@@ -103,7 +103,7 @@ window.addEventListener("load", () => {
             isTakeoverUserControl = true;
             takeoverContentSwiper.slideTo(takeoverSwiper.activeIndex)
         }));
-        // App BGI slide 
+        // App BGI slide
         let appBGISwiperAutoPlay = true;
         let appBGISwiper = new Swiper(".appBGISwiper", {
             preloadImages: false,
@@ -420,7 +420,7 @@ window.addEventListener("load", () => {
         }
     }
 
-    // Easy on scroll event listener 
+    // Easy on scroll event listener
     const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener)
     }
@@ -527,6 +527,8 @@ window.addEventListener("load", () => {
             mirror: false
         })
 
+        select('#scrollToCreative').classList.add("aos-init","aos-animate");
+
     });
 
     // Preloader
@@ -542,5 +544,3 @@ window.addEventListener("load", () => {
 const setAdItem = geturl => {
     window.open(`./awBanner/${geturl}/index.html`)
 };
-
-
