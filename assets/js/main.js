@@ -546,15 +546,22 @@ window.addEventListener("load", () => {
 
 const setAdItem = geturl => {
 
+const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
 
-console.log(document.documentElement.clientWidth)
-
-return
-
-
-
-
-
+if (document.documentElement.clientWidth < 1024) {
+  if (geturl.match("takeover")) {
+    desktopAlertPopup.classList.add('active')
+    return
+  }
+}
 
     window.open(`./awBanner/${geturl}/index.html`)
 };
+
+
+
+
+
+function desktopAlertPopupClose(){
+  desktopAlertPopup.classList.remove('active')
+}
