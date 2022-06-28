@@ -1688,6 +1688,9 @@ section#intro .introSliderBar {
     section#intro .iPhone-device {
         width: 16%
     }
+    section#intro .introScrollDown {
+        bottom: 160px;
+    }
 }
 
 @media screen and (max-width:360px) {
@@ -1771,8 +1774,14 @@ section#crossPlatformHero .logoLargeIcon {
 }
 
 section#crossPlatformHero .preview-button {
-    left: 10px;
-    bottom: 50px
+    left: 0px;
+    bottom: 0px
+}
+section#crossPlatformHero .swiper-pagination {
+    right: 0;
+    left: unset;
+    margin: unset;
+    bottom: 28px !important;
 }
 
 section#crossPlatformHero .crossPlatformHeroContentSwiper .swiper-slide {
@@ -1803,25 +1812,49 @@ section#crossPlatformHero .crossPlatformHeroContentSwiper {
         right: -390px
     }
 }
+@media (max-width: 767.98px) {
+    section#crossPlatformHero .crossPlatformHeroContentSwiper {
+        margin-bottom: 40px;
+    }
+    section#crossPlatformHero .crossPlatformHeroSwiper {
+        height: 380px;
+    }
+}
 
 @media (max-width:575.98px) {
-    section#crossPlatformHero .logoLargeIcon {
-        width: 500px;
-        height: 500px;
-        top: -190px;
-        right: -290px
-    }
+  section#crossPlatformHero .logoLargeIcon {
+      width: 300px;
+      height: 300px;
+      top: -190px;
+      right: -146px;
+  }
 
     section#crossPlatformHero .preview-button {
         left: 0;
         bottom: 10px;
         right: auto
     }
+        section#crossPlatformHero .crossPlatformHeroSwiper {
+        height: 286px;
+    }
+
+    section#crossPlatformHero .preview-button {
+        bottom: 4px;
+    }
+    section#crossPlatformHero .swiper-pagination {
+        bottom: 35px !important;
+    }
+
+
+
 }
 
 @media (max-width:360px) {
     section#crossPlatformHero .crossPlatformHeroContentSwiper .swiper-slide .copyContentWrapper {
         height: 410px
+    }
+    section#crossPlatformHero .crossPlatformHeroSwiper {
+        height: 78vw;
     }
 }
 
@@ -2070,7 +2103,7 @@ section#animatedBanner .swiper-pagination {
 }
 
 @media (max-width:991.98px) {
-    section#animatedBanner .row {
+    section#animatedBanner .row , #crossPlatformHero .section-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
         -ms-flex-flow: column-reverse;
