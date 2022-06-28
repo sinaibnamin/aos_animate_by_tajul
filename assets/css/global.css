@@ -228,9 +228,7 @@ section {
 }
 
 @media (max-width:991.98px) {
-    section {
-        min-height: calc(100vh - 60px)
-    }
+
 }
 
 @media (max-width:575.98px) {
@@ -1811,6 +1809,11 @@ section#crossPlatformHero .crossPlatformHeroContentSwiper {
     background: linear-gradient(45deg, rgba(244, 244, 244, 1) 0%, rgba(244, 244, 244, 0) 48%);
 }
 
+@media (max-width:1025px) {
+  section#crossPlatformHero .crossPlatformHeroContentSwiper {
+      margin-bottom: 40px;
+  }
+}
 @media (max-width:1199.98px) {
     section#crossPlatformHero .logoLargeIcon {
         width: 700px;
@@ -1821,9 +1824,7 @@ section#crossPlatformHero .crossPlatformHeroContentSwiper {
     }
 }
 @media (max-width: 767.98px) {
-    section#crossPlatformHero .crossPlatformHeroContentSwiper {
-        margin-bottom: 40px;
-    }
+
     section#crossPlatformHero .crossPlatformHeroSwiper {
         height: 380px;
     }
@@ -1931,7 +1932,8 @@ section#takeover .preview-button {
 section#takeover .swiper-pagination {
     text-align: left;
     left: 0;
-    right: auto
+    right: auto;
+    bottom: 10px !important;
 }
 
 @media (max-width:991.98px) {
@@ -2107,7 +2109,8 @@ section#animatedBanner .preview-button {
 
 section#animatedBanner .swiper-pagination {
     right: 0;
-    left: auto
+    left: auto;
+    bottom: 7px !important;
 }
 
 @media (max-width:991.98px) {
@@ -2257,7 +2260,8 @@ section#apiCreative .apiCardSliderWrapper .index-status-text {
 }
 
 section#apiCreative .swiper-pagination {
-    right: auto
+    right: auto;
+    bottom: 10px !important;
 }
 
 @media (max-width:1199.98px) {
@@ -2429,6 +2433,15 @@ section#ourBrands .section-content img {
         padding-top: 30px;
         padding-bottom: 30px
     }
+    section#standardBanner .nav-pills .nav-link {
+        margin: 0 10px 20px 10px;
+    }
+}
+@media (max-width:360px) {
+  section#standardBanner .nav-pills .nav-link {
+      margin: 0 5px 10px 5px;
+      padding: 10px;
+  }
 }
 
 img.lazy {
