@@ -2046,7 +2046,7 @@ section#appBGI .appBGISwiper .videoPlaceHolder {
   max-height: 450px;
   max-width: 272px;
   height: 100%;
-  width: 100%;
+  width: 201px;
   object-fit: fill;
   border-radius: 25px;
   padding: 5px;
