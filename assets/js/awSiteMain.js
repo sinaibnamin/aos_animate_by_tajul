@@ -181,97 +181,117 @@ injectmobileCss();
 
 // sn js
 
+runfunctionforsmalldevice()
 
-
-if (document.documentElement.clientWidth < 1024) {
-
-injectDeviceAlert()
-
-injectmobileswitcher()
-
-const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
-
-document.querySelector('#switcher-container').addEventListener('click', function(e){
-  if (e.target.closest('.resize-icon.desktop')) {
-    desktopAlertPopupopen()
-  }
-
-  if (e.target.closest('.resize-icon.ipad')) {
-    if(e.target.classList.contains('active')){
+function runfunctionforsmalldevice(){
+  // check is it on iframe
+    if(window.self !== window.top){
       return
-    }else {
-      desktopAlertPopupopen()
     }
-  }
-
-  if (e.target.closest('.resize-icon.iphone')) {
-    if(e.target.classList.contains('active')){
-      return
-    }else {
-      desktopAlertPopupopen()
-    }
-  }
 
 
+    if (document.documentElement.clientWidth < 1024) {
+
+    injectDeviceAlert()
+
+    injectmobileswitcher()
+
+    const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
+
+    document.querySelector('#switcher-container').addEventListener('click', function(e){
+      if (e.target.closest('.resize-icon.desktop')) {
+        desktopAlertPopupopen()
+      }
+
+      if (e.target.closest('.resize-icon.ipad')) {
+        if(e.target.classList.contains('active')){
+          return
+        }else {
+          desktopAlertPopupopen()
+        }
+      }
+
+      if (e.target.closest('.resize-icon.iphone')) {
+        if(e.target.classList.contains('active')){
+          return
+        }else {
+          desktopAlertPopupopen()
+        }
+      }
 
 
-})
+
+
+    })
 
 
 
-}
 
-function injectDeviceAlert(){
-  const html = `
-  <div class="desktopAlertPopup" id="desktopAlertPopup" onclick="desktopAlertPopupClose()">
-      <div class="mainAlert">
-        <div class="">
-          <div class="alertheadline">Device Alert</div>
-          <p class="alertParagraph">Please use desktop browser to see all device view.</p>
-        </div>
-        <div class="alert-footer">
-          <button class="alert-close-button" type="button" name="button" onclick="desktopAlertPopupClose()">ok</button>
-        </div>
+
+    function injectDeviceAlert(){
+      const html = `
+      <div class="desktopAlertPopup desktopPopUpClose" id="desktopAlertPopup">
+          <div class="mainAlert">
+            <div class="">
+              <div class="alertheadline">Device Alert</div>
+              <p class="alertParagraph">Please use desktop browser to see all device view.</p>
+            </div>
+            <div class="alert-footer">
+              <button class="alert-close-button desktopPopUpClose" type="button" name="button">ok</button>
+            </div>
+          </div>
       </div>
-  </div>
-  `
-  document.querySelector('body').insertAdjacentHTML("afterbegin", html)
+      `
+      document.querySelector('body').insertAdjacentHTML("afterbegin", html)
 
-}
+    }
+
+    document.querySelector('.desktopPopUpClose').addEventListener('click', function(){
+      desktopAlertPopup.classList.remove('active')
+    })
 
 
-function desktopAlertPopupClose(){
-  desktopAlertPopup.classList.remove('active')
-}
-function desktopAlertPopupopen(){
-  desktopAlertPopup.classList.add('active')
 
-}
+    function desktopAlertPopupClose(){
+      desktopAlertPopup.classList.remove('active')
+    }
+    function desktopAlertPopupopen(){
+      desktopAlertPopup.classList.add('active')
 
-function injectmobileswitcher(){
-  const html = `
-  <div id="switcher-container">
-    <ul id="switcher">
-      <li class="resize animated fadeIn">
-        <ul>
-          <li><a href="#" class="sprite resize-icon desktop" title="Desktop"></a></li>
-          <li><a href="#" class="sprite resize-icon ipad" title="iPad"></a></li>
-          <li><a href="#" class="sprite resize-icon iphone" title="iPhone"></a></li>
+    }
+
+
+    function injectmobileswitcher(){
+      const html = `
+      <div id="switcher-container">
+        <ul id="switcher">
+          <li class="resize animated fadeIn">
+            <ul>
+              <li><a href="#" class="sprite resize-icon desktop" title="Desktop"></a></li>
+              <li><a href="#" class="sprite resize-icon ipad" title="iPad"></a></li>
+              <li><a href="#" class="sprite resize-icon iphone" title="iPhone"></a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-  </div>
-  `
-  document.querySelector('.template-root .nfl-header').insertAdjacentHTML("afterbegin", html)
+      </div>
+      `
+      document.querySelector('.template-root .nfl-header').insertAdjacentHTML("afterbegin", html)
 
-  if (document.documentElement.clientWidth < 768) {
-    document.querySelector('.resize-icon.iphone').classList.add('active')
-    document.querySelector('.header-placeholder.has-alerts').style.height = '125px'
+      if (document.documentElement.clientWidth < 768) {
+        document.querySelector('.resize-icon.iphone').classList.add('active')
+        document.querySelector('.header-placeholder.has-alerts').style.height = '125px'
 
-  }else {
-    document.querySelector('.resize-icon.ipad').classList.add('active')
-    document.querySelector('.header-placeholder.has-alerts').style.height = '145px'
-  }
+      }else {
+        document.querySelector('.resize-icon.ipad').classList.add('active')
+        document.querySelector('.header-placeholder.has-alerts').style.height = '145px'
+      }
+
+
+
+    }
+
+
+    }
 
 
 

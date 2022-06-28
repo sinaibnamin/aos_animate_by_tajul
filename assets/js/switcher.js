@@ -46,6 +46,19 @@ jQuery(document).ready(function ($) {
 
     $('.desktop').addClass('active');
 
+
+let pageUrl = $(location).attr('pathname');
+
+if(pageUrl.match("takeover")){
+  $('.ipad,.iphone').hide();
+}
+
+
+
+
+
+
+
 });
 
 // send data to iFrame
