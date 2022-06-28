@@ -746,7 +746,7 @@ button.preview-button-secondary:hover {
   bottom: 0;
   right: 0;
   margin: auto;
-  z-index: 2;
+  z-index: 12;
   opacity: 0;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
