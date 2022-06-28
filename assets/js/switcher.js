@@ -63,6 +63,12 @@ if(pageUrl.match("animatedBanner")){
   if(pageUrl.match("slide7")){
     $('.ipad,.iphone').hide();
   }
+  if(pageUrl.match("slide1")){
+    $('.ipad,.iphone').hide();
+  }
+  if(pageUrl.match("slide2")){
+    $('.ipad,.iphone').hide();
+  }
 
 }
 
