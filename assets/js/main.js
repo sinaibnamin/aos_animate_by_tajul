@@ -562,6 +562,10 @@ if (document.documentElement.clientWidth < 1025) {
       desktopAlertPopupopen()
       return
     }
+    if (geturl.match("slide7")) {
+      desktopAlertPopupopen()
+      return
+    }
     if (geturl.match("slide8")) {
       desktopAlertPopupopen()
       return
