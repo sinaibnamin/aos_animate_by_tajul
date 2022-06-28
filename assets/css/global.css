@@ -1607,12 +1607,20 @@ section#intro .introSliderBar {
         right: 30px
     }
 }
+@media (max-width:1025px) {
+  section#intro .intro-copy-wrapper {
+    padding: 0px 40px 40px 40px;
+    margin: 0px 0 10px 0;
+  }
+  section#intro .introScrollDown {
+      bottom: 160px;
+  }
+}
 
 @media (max-width:1199.98px) {
     section#intro .introScrollDown {
         width: 100%;
         height: 3px;
-        bottom: 100px;
         padding-bottom: 20px
     }
 
