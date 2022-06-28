@@ -554,7 +554,19 @@ if (document.documentElement.clientWidth < 1025) {
     return
   }
   if (geturl.match("animatedBanner")) {
-    desktopAlertPopup.classList.add('active')
+    if (geturl.match("slide1")) {
+      desktopAlertPopup.classList.add('active')
+      return
+    }
+    if (geturl.match("slide2")) {
+      desktopAlertPopup.classList.add('active')
+      return
+    }
+    if (geturl.match("slide8")) {
+      desktopAlertPopup.classList.add('active')
+      return
+    }
+    window.open(`./awBanner/${geturl}/ad.html`)
     return
   }
 
