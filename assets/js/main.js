@@ -550,20 +550,20 @@ const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
 
 if (document.documentElement.clientWidth < 1025) {
   if (geturl.match("takeover")) {
-    desktopAlertPopup.classList.add('active')
+    desktopAlertPopupopen()
     return
   }
   if (geturl.match("animatedBanner")) {
     if (geturl.match("slide1")) {
-      desktopAlertPopup.classList.add('active')
+      desktopAlertPopupopen()
       return
     }
     if (geturl.match("slide2")) {
-      desktopAlertPopup.classList.add('active')
+      desktopAlertPopupopen()
       return
     }
     if (geturl.match("slide8")) {
-      desktopAlertPopup.classList.add('active')
+      desktopAlertPopupopen()
       return
     }
     window.open(`./awBanner/${geturl}/ad.html`)
@@ -575,6 +575,10 @@ if (document.documentElement.clientWidth < 1025) {
     return
   }
   if (geturl.match("apiCreative")) {
+    if (geturl.match("slide2")) {
+      desktopAlertPopupopen()
+      return
+    }
     window.open(`./awBanner/${geturl}/ad.html`)
     return
   }
@@ -591,6 +595,9 @@ if (document.documentElement.clientWidth < 1025) {
 
 
 
+function desktopAlertPopupopen(){
+  desktopAlertPopup.classList.add('active')
+}
 function desktopAlertPopupClose(){
   desktopAlertPopup.classList.remove('active')
 }
