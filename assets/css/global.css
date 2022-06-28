@@ -1783,7 +1783,8 @@ section#crossPlatformHero .logoLargeIcon {
 
 section#crossPlatformHero .preview-button {
   left: 0px;
-  bottom: 0px
+  bottom: 0px;
+  color: #000000;
 }
 
 section#crossPlatformHero .swiper-pagination {
@@ -2190,7 +2191,8 @@ section#apiCreative .section-title span {
 section#apiCreative .preview-button {
   left: auto;
   bottom: 0;
-  right: 10px
+  right: 10px;
+  color: #000000;
 }
 
 section#apiCreative .apiCardSwiper {

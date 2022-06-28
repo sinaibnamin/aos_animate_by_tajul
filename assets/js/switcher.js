@@ -59,6 +59,13 @@ if(pageUrl.match("apiCreative")){
 
 }
 
+if(pageUrl.match("animatedBanner")){
+  if(pageUrl.match("slide7")){
+    $('.ipad,.iphone').hide();
+  }
+
+}
+
 
 
 
