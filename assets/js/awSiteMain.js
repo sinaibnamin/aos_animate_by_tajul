@@ -181,14 +181,43 @@ injectmobileCss();
 
 // sn js
 
-if (document.documentElement.clientWidth < 1025) {
+if (document.documentElement.clientWidth < 1024) {
 
-showDeviceAlert()
+// showDeviceAlert()
+
+injectmobileswitcher()
+
 
 }
 
 function desktopAlertPopupClose(){
   desktopAlertPopup.classList.remove('active')
+}
+
+function injectmobileswitcher(){
+  const html = `
+  <div id="switcher-container">
+    <ul id="switcher">
+      <li class="resize animated fadeIn">
+        <ul>
+          <li><a href="#" class="sprite resize-icon desktop" title="Desktop"></a></li>
+          <li><a href="#" class="sprite resize-icon ipad" title="iPad"></a></li>
+          <li><a href="#" class="sprite resize-icon iphone" title="iPhone"></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  `
+  document.querySelector('.template-root .nfl-header').insertAdjacentHTML("afterbegin", html)
+
+  if (document.documentElement.clientWidth < 768) {
+    document.querySelector('.resize-icon.iphone').classList.add('active')
+    document.querySelector('.header-placeholder.has-alerts').style.height = '125px'
+
+  }else {
+    document.querySelector('.header-placeholder.has-alerts').style.height = '145px'
+  }
+
 }
 
 
