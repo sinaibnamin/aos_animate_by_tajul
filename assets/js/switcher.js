@@ -49,28 +49,31 @@ jQuery(document).ready(function ($) {
 
 let pageUrl = $(location).attr('pathname');
 
-if(pageUrl.match("takeover")){
-  $('.ipad,.iphone').hide();
-}
-if(pageUrl.match("apiCreative")){
-  if(pageUrl.match("slide2")){
+const hideicon = function(){
+  if(pageUrl.match("takeover")){
     $('.ipad,.iphone').hide();
+  }
+  if(pageUrl.match("apiCreative")){
+    if(pageUrl.match("slide2")){
+      $('.ipad,.iphone').hide();
+    }
   }
 
+  if(pageUrl.match("animatedBanner")){
+    if(pageUrl.match("slide7")){
+      $('.ipad,.iphone').hide();
+    }
+    if(pageUrl.match("slide1")){
+      $('.ipad,.iphone').hide();
+    }
+    if(pageUrl.match("slide2")){
+      $('.ipad,.iphone').hide();
+    }
+  }
 }
 
-if(pageUrl.match("animatedBanner")){
-  if(pageUrl.match("slide7")){
-    $('.ipad,.iphone').hide();
-  }
-  if(pageUrl.match("slide1")){
-    $('.ipad,.iphone').hide();
-  }
-  if(pageUrl.match("slide2")){
-    $('.ipad,.iphone').hide();
-  }
+setTimeout(hideicon, 500);
 
-}
 
 
 
