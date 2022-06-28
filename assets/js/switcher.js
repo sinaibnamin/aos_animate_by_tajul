@@ -52,6 +52,12 @@ let pageUrl = $(location).attr('pathname');
 if(pageUrl.match("takeover")){
   $('.ipad,.iphone').hide();
 }
+if(pageUrl.match("apiCreative")){
+  if(pageUrl.match("slide2")){
+    $('.ipad,.iphone').hide();
+  }
+
+}
 
 
 
