@@ -181,17 +181,71 @@ injectmobileCss();
 
 // sn js
 
+
+
 if (document.documentElement.clientWidth < 1024) {
 
-// showDeviceAlert()
+injectDeviceAlert()
 
 injectmobileswitcher()
+
+const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
+
+document.querySelector('#switcher-container').addEventListener('click', function(e){
+  if (e.target.closest('.resize-icon.desktop')) {
+    desktopAlertPopupopen()
+  }
+
+  if (e.target.closest('.resize-icon.ipad')) {
+    if(e.target.classList.contains('active')){
+      return
+    }else {
+      desktopAlertPopupopen()
+    }
+  }
+
+  if (e.target.closest('.resize-icon.iphone')) {
+    if(e.target.classList.contains('active')){
+      return
+    }else {
+      desktopAlertPopupopen()
+    }
+  }
+
+
+
+
+})
+
 
 
 }
 
+function injectDeviceAlert(){
+  const html = `
+  <div class="desktopAlertPopup" id="desktopAlertPopup" onclick="desktopAlertPopupClose()">
+      <div class="mainAlert">
+        <div class="">
+          <div class="alertheadline">Device Alert</div>
+          <p class="alertParagraph">Please use desktop browser to see all device view.</p>
+        </div>
+        <div class="alert-footer">
+          <button class="alert-close-button" type="button" name="button" onclick="desktopAlertPopupClose()">ok</button>
+        </div>
+      </div>
+  </div>
+  `
+  document.querySelector('body').insertAdjacentHTML("afterbegin", html)
+
+}
+
+
 function desktopAlertPopupClose(){
   desktopAlertPopup.classList.remove('active')
+}
+function desktopAlertPopupopen(){
+  desktopAlertPopup.classList.add('active')
+
 }
 
 function injectmobileswitcher(){
@@ -215,25 +269,10 @@ function injectmobileswitcher(){
     document.querySelector('.header-placeholder.has-alerts').style.height = '125px'
 
   }else {
+    document.querySelector('.resize-icon.ipad').classList.add('active')
     document.querySelector('.header-placeholder.has-alerts').style.height = '145px'
   }
 
-}
 
 
-function showDeviceAlert(){
-  const html = `
-  <div class="desktopAlertPopup active" id="desktopAlertPopup" onclick="desktopAlertPopupClose()">
-      <div class="mainAlert">
-        <div class="">
-          <div class="alertheadline">Device Alert</div>
-          <p class="alertParagraph">Please use desktop browser to see all device view.</p>
-        </div>
-        <div class="alert-footer">
-          <button class="alert-close-button" type="button" name="button" onclick="desktopAlertPopupClose()">ok</button>
-        </div>
-      </div>
-  </div>
-  `
-  document.querySelector('body').insertAdjacentHTML("afterbegin", html)
 }

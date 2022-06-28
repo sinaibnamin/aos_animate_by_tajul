@@ -553,8 +553,16 @@ if (document.documentElement.clientWidth < 1025) {
     desktopAlertPopup.classList.add('active')
     return
   }
+  if (geturl.match("animatedBanner")) {
+    desktopAlertPopup.classList.add('active')
+    return
+  }
 
   if (geturl.match("crossPlatformHero")) {
+    window.open(`./awBanner/${geturl}/ad.html`)
+    return
+  }
+  if (geturl.match("apiCreative")) {
     window.open(`./awBanner/${geturl}/ad.html`)
     return
   }
