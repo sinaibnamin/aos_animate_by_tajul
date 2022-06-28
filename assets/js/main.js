@@ -548,12 +548,21 @@ const setAdItem = geturl => {
 
 const desktopAlertPopup = document.querySelector('#desktopAlertPopup')
 
-if (document.documentElement.clientWidth < 1024) {
+if (document.documentElement.clientWidth < 1025) {
   if (geturl.match("takeover")) {
     desktopAlertPopup.classList.add('active')
     return
   }
+
+  if (geturl.match("crossPlatformHero")) {
+    window.open(`./awBanner/${geturl}/ad.html`)
+    return
+  }
+
+
 }
+
+
 
     window.open(`./awBanner/${geturl}/index.html`)
 };

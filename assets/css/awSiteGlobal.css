@@ -1,1 +1,62 @@
 @media (max-width:420px){.air-quality-card,.header-search-bar,.lifestyle-index-list{display:none!important}}
+
+/* sncss */
+
+.desktopAlertPopup{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  background: #000000ad;
+  display: none;
+  opacity: 0;
+  transition: all 1s;
+}
+.desktopAlertPopup.active{
+  display: block;
+  opacity: 1;
+  animation: alertpopupanim .3s both;
+}
+@keyframes alertpopupanim {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.desktopAlertPopup .mainAlert{
+  position: absolute;
+  height: 200px;
+  width: 90%;
+  inset:0;
+  margin: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+    justify-content: space-between;
+}
+.desktopAlertPopup .alertheadline {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff0100;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ff0100;
+}
+.desktopAlertPopup .alertParagraph{
+  font-size: 13px;
+  font-weight: 400;
+  color: #000000;
+  padding: 10px 20px;
+}
+.desktopAlertPopup .alert-footer{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.desktopAlertPopup .alert-close-button{
+  background: red;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}

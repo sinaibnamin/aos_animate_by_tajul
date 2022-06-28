@@ -175,3 +175,36 @@ const injectmobileCss = () => {
 mediaQueryList.addListener(injectmobileCss);
 
 injectmobileCss();
+
+
+
+
+// sn js
+
+if (document.documentElement.clientWidth < 1025) {
+
+showDeviceAlert()
+
+}
+
+function desktopAlertPopupClose(){
+  desktopAlertPopup.classList.remove('active')
+}
+
+
+function showDeviceAlert(){
+  const html = `
+  <div class="desktopAlertPopup active" id="desktopAlertPopup" onclick="desktopAlertPopupClose()">
+      <div class="mainAlert">
+        <div class="">
+          <div class="alertheadline">Device Alert</div>
+          <p class="alertParagraph">Please use desktop browser to see all device view.</p>
+        </div>
+        <div class="alert-footer">
+          <button class="alert-close-button" type="button" name="button" onclick="desktopAlertPopupClose()">ok</button>
+        </div>
+      </div>
+  </div>
+  `
+  document.querySelector('body').insertAdjacentHTML("afterbegin", html)
+}
